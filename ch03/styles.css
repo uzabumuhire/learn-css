@@ -35,8 +35,8 @@ body {
 .page-header h1 {
   max-inline-size: var(--column-width);
   /*max-inline-size: calc(var(--column-width) - 3rem);  If content box sizing is used. */
-  margin-inline: auto;
-  padding-inline: 1.5rem;
+  margin: 0 auto;
+  padding: 1em 1.5rem;
 }
 
 .container {
