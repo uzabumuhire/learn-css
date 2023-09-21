@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
   <style>
+    /*
     :root {
       font-size: 0.85em;
     }
@@ -13,6 +14,15 @@
       :root {
         font-size: 1.15em;
       }
+    }*/
+
+    /*
+      Use calc() to combine ems with svw units. swv stands for small viewport width.
+      The 0.5em here operates as a sort of minimum font size, and the 1svw adds a responsive scalar.
+      This gives you a base font size that scales from 11.75 px on an iPhone SE up to 20 px in a 1,200-px browser window.
+    */
+    :root {
+      font-size: calc(0.5em + 1svw);
     }
 
     body {
@@ -36,6 +46,10 @@
     .panel.large {
       font-size: 1.2em;
     }
+
+    .panel.small {
+      font-size: 0.8em;
+    }
   </style>
 </head>
 
@@ -49,6 +63,14 @@
     </div>
   </div>
   <div class="panel large">
+    <h2>Single-origin</h2>
+    <div class="body">
+      We have built partnerships with small farms around the world to
+      hand-select beans at the peak of season. We then carefully roast in
+      <a href="/batch-size.html">small batches</a> to maximize their potential.
+    </div>
+  </div>
+  <div class="panel small">
     <h2>Single-origin</h2>
     <div class="body">
       We have built partnerships with small farms around the world to
