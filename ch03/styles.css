@@ -17,15 +17,17 @@ body {
 /*
   Sets a maximum width of 1,080 px.
   Auto left and right margins will grow to fill the available space, centering the element within the outer container.
+  Sets left/right margins to auto without specifying top/bottom margins.
+  max-inline-size is a logical property equivalent for max-width
 */
 .page-header h1 {
-  max-width: var(--column-width);
-  margin: 0 auto;
+  max-inline-size: var(--column-width);
+  margin-inline: auto;
 }
 
 .container {
-  max-width: var(--column-width);
-  margin: 0 auto;
+  max-inline-size: var(--column-width);
+  margin-inline: auto;
 }
   
 .main {
