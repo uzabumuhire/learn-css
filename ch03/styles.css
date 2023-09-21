@@ -1,3 +1,14 @@
+/* 
+  Applies border box sizing to all elements and pseudo-elements on the page.
+  height and width will always specify the actual height and width of an element. 
+  Padding will not change them.
+*/
+*, 
+::before, 
+::after {
+  box-sizing: border-box;
+}
+
 :root {
   --brand-color: #0072b0;
   --column-width: 1080px;
@@ -18,11 +29,14 @@ body {
   Sets a maximum width of 1,080 px.
   Auto left and right margins will grow to fill the available space, centering the element within the outer container.
   Sets left/right margins to auto without specifying top/bottom margins.
-  max-inline-size is a logical property equivalent for max-width
+  max-inline-size is a logical property equivalent for max-width.
+  Changes the box model to border-box sizing.
 */
 .page-header h1 {
   max-inline-size: var(--column-width);
+  /*max-inline-size: calc(var(--column-width) - 3rem);  If content box sizing is used. */
   margin-inline: auto;
+  padding-inline: 1.5rem;
 }
 
 .container {
@@ -31,11 +45,13 @@ body {
 }
   
 .main {
+  padding: 1em 1.5rem;
   background-color: #fff;
   border-radius: 0.5em;
 }
   
 .social-links {
+  padding: 1em 1.5rem;
   background-color: #fff;
   border-radius: 0.5em;
 }
