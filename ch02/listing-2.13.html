@@ -20,9 +20,18 @@
       Use calc() to combine ems with svw units. swv stands for small viewport width.
       The 0.5em here operates as a sort of minimum font size, and the 1svw adds a responsive scalar.
       This gives you a base font size that scales from 11.75 px on an iPhone SE up to 20 px in a 1,200-px browser window.
-    */
+    
     :root {
       font-size: calc(0.5em + 1svw);
+    }
+    */
+
+    /*
+      This specifies a font size of 0.6rem + 0.5svw, but the clamp function ensures the final value is never smaller than 0.9rem and never larger than 1.5rem. 
+      This way, very large or very small viewports do not end up with text sizes outside of a reasonable range.
+    */
+    :root {
+      font-size: clamp(0.9rem, 0.6rem + 0.5svw, 1.5rem);
     }
 
     body {
