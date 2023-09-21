@@ -4,8 +4,8 @@
   Padding will not change them.
 */
 *, 
-::before, 
-::after {
+*::before, 
+*::after {
   box-sizing: border-box;
 }
 
@@ -49,9 +49,47 @@ body {
   background-color: #fff;
   border-radius: 0.5em;
 }
-  
+
+/*
+  "max-inline-size: 25em;" reduces the width of the container.
+*/
 .social-links {
+  max-inline-size: 25em;
   padding: 1em 1.5rem;
   background-color: #fff;
   border-radius: 0.5em;
+}
+
+/*
+  "display: block;" fills the available width and puts each link on its own line.
+*/
+.button-link {
+  display: block;
+  padding: 0.5em;
+  color: #fff;
+  background-color: var(--brand-color);
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/*
+  "margin-block-start: 1.5em;" applies a top margin to button-links that immediately follow another button-link.
+.button-link + .button-link {
+  margin-block-start: 1.5em;
+}
+*/
+
+.sponsor-link {
+  display: block;
+  color: var(--brand-color);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/*
+  Targets all children in the stack except the first one.
+*/
+.stack > * + * {
+  margin-block-start: 1.5em;
 }
