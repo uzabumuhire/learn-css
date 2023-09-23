@@ -1,0 +1,29 @@
+.container {
+    display: grid;
+    grid-template-columns: [left-start] 2fr [left-end right-start] 1fr [right-end]; /* Names each vertical grid line */
+    grid-template-rows: repeat(4, [row] auto); /* Names horizontal grid lines “row” */
+    gap: var(--gap-size);
+    max-inline-size: 1080px;
+    margin-inline: auto;
+  }
+  
+  header,
+  nav {
+    grid-column: left-start / right-end;
+    grid-row: span 1;
+  }
+  
+  .main {
+    grid-column: left; /* Spans from left-start to left-end */
+    grid-row: row 3 / span 2; /* Places the item beginning at the third “row” grid line and spanning two grid tracks*/
+  }
+  
+  .sidebar-top {
+    grid-column: right; /* Spans from right-start to right-end */
+    grid-row: 3 / 4;
+  }
+  
+  .sidebar-bottom {
+    grid-column: right; /* Spans from right-start to right-end */
+    grid-row: 4 / 5;
+  }
