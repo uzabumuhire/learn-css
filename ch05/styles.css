@@ -1,0 +1,19 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+.grid {
+  display: grid; /* Makes the element a grid container */
+  grid-template-columns: 1fr 2fr 1fr; /* Defines three columns of equal width */
+  grid-template-rows: 1fr 3fr; /* Defines two rows of equal height */
+  gap: 0.5em 1em; /* Applies a gutter between each grid cell */
+}
+
+.grid > * {
+  background-color: darkgray;
+  color: white;
+  padding: 2em;
+  border-radius: 0.5em;
+}
