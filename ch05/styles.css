@@ -61,7 +61,7 @@ nav {
 }
  
 .site-nav {
-  display: flex;
+  display: flex; /* The flexbox menu */
   gap: var(--gap-size);
   margin: 0;
   padding: 0.5em;
@@ -107,7 +107,7 @@ nav {
 }
  
 .cost {
-  display: flex;
+  display: flex; /* Stylized “cost” using flexbox */
   justify-content: center;
   align-items: center;
   line-height: 0.7;
