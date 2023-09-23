@@ -126,3 +126,41 @@ body {
   padding: 0.5em 1em;
   cursor: pointer;
 }
+
+.centered {
+  text-align: center;
+}
+ 
+/*
+  Centers flex items on both the main and cross axes.
+  'line-height: 0.7;' arrived at this value purely by trial-and-error until the tops of the 20 and .00 aligned visually.
+*/
+.cost {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0.7;
+}
+
+/*
+  Sets different font sizes for each part of the cost.
+  Overrides align-items for cost cents item, aligning it to the top instead of center.
+*/
+.cost-currency {
+  font-size: 2rem;
+}
+.cost-dollars {
+  font-size: 4rem;
+}
+.cost-cents {
+  font-size: 1.5rem;
+  align-self: flex-start;
+}
+ 
+.cta-button {
+  display: block;
+  background-color: #cc6b5a;
+  color: white;
+  padding: 0.5em 1em;
+  text-decoration: none;
+}
