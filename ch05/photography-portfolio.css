@@ -18,7 +18,7 @@ body {
   grid-auto-rows: 1fr; /* Sets an implicit horizontal grid track size of 1 fr */ 
 
   gap: 1em;
-  
+
   grid-auto-flow: dense; /* Enables the dense grid placement algorithm */
 }
 
@@ -28,10 +28,16 @@ body {
 }
 
 .portfolio > figure {
+  /* Makes each grid item a vertical flexbox */
+  display: flex;
+  flex-direction: column;
+
   margin: 0; /* Overrides user agent margins */
 }
 
 .portfolio img {
+  flex: 1; /* Uses flex grow to make the image fill the available space in the flex container */
+  object-fit: cover; /* Allows the image to fill the box without being stretched (cropping edges instead) */
   max-inline-size: 100%;
 }
 
