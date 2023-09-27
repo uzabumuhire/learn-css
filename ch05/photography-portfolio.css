@@ -20,6 +20,9 @@ body {
   gap: 1em;
 
   grid-auto-flow: dense; /* Enables the dense grid placement algorithm */
+
+  max-inline-size: 1000px;
+  margin-inline: auto;
 }
 
 .portfolio .featured {
