@@ -13,19 +13,24 @@ body {
   /* Grid with three equal columns */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  
   gap: 1em;
   max-inline-size: 800px;
   margin-inline: auto;
 }
 
 .card {
+  display: grid; /* Makes a card a grid container */
+  gap: 0;
+  grid-row: span 3; /* Makes the card span three rows */
+  grid-template-rows: max-content auto max-content; /* Sets a fallback row sizing for browsers that don’t support subgrid */
+  grid-template-rows: subgrid; /* Uses the parent grid’s rows */
   padding: 1rem;
   border-radius: 0.5rem;
   background-color: #fff;
 }
 
 .card > h3 {
+  align-self: end; /* Aligns the heading to the bottom of the grid row */
   margin-block: 0;
   padding-block-end: 0.5rem;
   border-block-end: 1px solid #eee;
