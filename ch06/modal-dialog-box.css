@@ -63,10 +63,34 @@ button {
   overflow: auto;
 }
 
-/* Positions relative to the relatively-positioned parent */
+
 .modal-close {
+  /* Positions relative to the relatively-positioned parent */
   position: absolute;
   top: 0.3em;
   right: 0.3em;
+
   padding: 0.3em;
+  border: 0;
+  cursor: pointer;
+  font-size: 2em;
+
+  /* Makes the button a small square */
+  height: 1em;
+  width: 1em;
+
+  /* Forces the text to overflow the element and hides it */
+  text-indent: 10em;
+  overflow: hidden;
+
+  background-color: transparent;
+}
+
+.modal-close::after {
+  position: absolute;
+  line-height: 0.5;
+  top: 0.2em;
+  left: 0.1em;
+  text-indent: 0;
+  content: "\00D7"; /* Adds the unicode character U+00D7 (multiplication sign) */
 }
