@@ -4,6 +4,10 @@ body {
   margin: 0;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 button,
 input {
   font: inherit; /* Overrides user agent fonts applied to form elements */
