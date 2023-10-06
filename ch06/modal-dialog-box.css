@@ -62,3 +62,11 @@ button {
   background-color: white;
   overflow: auto;
 }
+
+/* Positions relative to the relatively-positioned parent */
+.modal-close {
+  position: absolute;
+  top: 0.3em;
+  right: 0.3em;
+  padding: 0.3em;
+}
