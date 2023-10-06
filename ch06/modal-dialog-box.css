@@ -51,6 +51,7 @@ button {
   position: fixed;
   inset: 0; /* Makes the backdrop fill the entire viewport */
   background-color: rgba(0, 0, 0, 0.5); /* Obscures the rest of the page while the modal is open */
+  z-index: 1; /* Brings the backdrop in front of elements without a z-index */
 }
 
 /* Positions the main part of the modal */
@@ -61,8 +62,8 @@ button {
   padding: 2em 3em;
   background-color: white;
   overflow: auto;
+  z-index: 2; /* Brings the modal-body in front of the backdrop */
 }
-
 
 .modal-close {
   /* Positions relative to the relatively-positioned parent */
