@@ -4,10 +4,28 @@
 }
 
 .dropdown-toggle {
-  padding: 0.5em 1.5em;
+  padding: 0.5em 2em 0.5em 1.5em; /* Increase the right padding to make space for the arrow */
   border: 1px solid #ccc;
   background-color: #eee;
   border-radius: 0;
+}
+
+.dropdown-toggle::after {
+  content: ""; /*  no content, so it has no height or width */
+
+  /* Positions the element on the right side of the toggle button */
+  position: absolute;
+  right: 1em;
+  top: 0.9em;
+
+  /* Uses the top border to form a down arrow */
+  border: 0.3em solid;
+  border-color: black transparent transparent;
+}
+
+.dropdown.is-open .dropdown-toggle::after {
+  top: 0.6em;
+  border-color: transparent transparent black; /* When open, change to an up arrow */
 }
 
 .dropdown-menu {
