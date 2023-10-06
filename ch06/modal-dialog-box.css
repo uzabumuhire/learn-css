@@ -42,3 +42,19 @@ button {
 .modal.is-open {
   display: block; /* Displays the modal while the is-open class is present*/
 }
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0; /* Makes the backdrop fill the entire viewport */
+  background-color: rgba(0, 0, 0, 0.5); /* Obscures the rest of the page while the modal is open */
+}
+
+/* Positions the main part of the modal */
+.modal-body {
+  position: fixed;
+  inset-block: 3em;
+  inset-inline: 20%;
+  padding: 2em 3em;
+  background-color: white;
+  overflow: auto;
+}
